@@ -5,6 +5,7 @@ from gauss.legendre.bonnet import legendre_polynomial
 
 
 def _assert_poly_equals(p, ptrue):
+
     for k, coefs in enumerate(zip_longest(p, ptrue, fillvalue=0)):
         a, atrue = coefs
         assert a == atrue, (
